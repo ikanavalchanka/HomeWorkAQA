@@ -3,7 +3,6 @@ package homework4.task7;
 import java.util.ArrayList;
 import java.util.List;
 public class Park {
-    // Внутренний класс для представления аттракциона
     public class Attraction {
         private String attractionName;
         private String operatingTime;
@@ -28,19 +27,19 @@ public class Park {
         }
     }
 
-    private List<Attraction> attractions;  // Список аттракционов в парке
+    private List<Attraction> attractions;
 
     public Park() {
         attractions = new ArrayList<>();
     }
 
-    // Метод для добавления аттракциона в парк
+
     public void addAttraction(String attractionName, String operatingTime, double cost) {
         Attraction newAttraction = new Attraction(attractionName, operatingTime, cost);
         attractions.add(newAttraction);
     }
 
-    // Метод для вывода информации об аттракциях в парке
+
     public void printAttractionsInfo() {
         System.out.println("Attrctions avaliable in the park:");
         for (Attraction attraction : attractions) {
