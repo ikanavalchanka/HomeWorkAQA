@@ -10,8 +10,19 @@ public Cat(String name, int appetite) {
     this.appetite = appetite;
     this.stomachFull=false;
 }
-public void eat(Plate p){
-    p.decreaseFood(appetite);
+
+    public int eat(Plate p) {
+        int eatenFood = p.decreaseFood(appetite);
+        if (eatenFood > 0) {
+            System.out.println("Cat " + name + " has eaten the food");
+            stomachFull = true;
+            System.out.println(name + " (cat's satiety) " + stomachFull);
+        } else if (eatenFood == 0) {
+            System.out.println("Cat " + name + " hasn't eaten the food");
+            stomachFull = false;
+            System.out.println(name + " (cat's satiety) " + stomachFull);
+        }
+        return eatenFood;
     }
 
 }
