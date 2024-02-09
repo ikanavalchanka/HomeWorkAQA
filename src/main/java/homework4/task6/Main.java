@@ -1,6 +1,7 @@
 package homework4.task6;
 import java.util.ArrayList;
 import java.util.List;
+//Создать класс Payment с внутренним классом, с помощью объектов которого можно сформировать покупку из нескольких товаров.
 public class Main {
     public static void main(String[] args) {
         Payment payment = new Payment();
